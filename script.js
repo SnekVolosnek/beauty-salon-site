@@ -226,7 +226,7 @@ function initBookingForm() {
     form.hidden = true;
     if (success) {
       success.hidden = false;
-      success.removeAttribute('hidden');
+      success.style.display = 'block';
     }
   });
 }
