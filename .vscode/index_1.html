@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumière — Салон красоты премиум-класса</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-line"></span>
+        Lumière
+        <span class="nav__logo-line"></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+      <a href="#booking" class="btn btn--nav">Записаться</a>
+      <button class="nav__burger" id="burger" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <ul>
+        <li><a href="#about" class="mob-link">О нас</a></li>
+        <li><a href="#services" class="mob-link">Услуги</a></li>
+        <li><a href="#gallery" class="mob-link">Галерея</a></li>
+        <li><a href="#reviews" class="mob-link">Отзывы</a></li>
+        <li><a href="#contacts" class="mob-link">Контакты</a></li>
+        <li><a href="#booking" class="mob-link">Записаться</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" id="heroBg">
+      <!-- SVG background pattern -->
+      <svg class="hero__pattern" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="rg1" cx="30%" cy="40%" r="60%">
+            <stop offset="0%" stop-color="#F5D5CB" stop-opacity="0.45"/>
+            <stop offset="100%" stop-color="#FDFAF6" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="rg2" cx="80%" cy="70%" r="50%">
+            <stop offset="0%" stop-color="#C9A96E" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#FDFAF6" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="800" height="800" fill="#FDFAF6"/>
+        <rect width="800" height="800" fill="url(#rg1)"/>
+        <rect width="800" height="800" fill="url(#rg2)"/>
+        <!-- Delicate botanical lines -->
+        <g stroke="#C9A96E" stroke-width="0.5" fill="none" opacity="0.25">
+          <ellipse cx="650" cy="200" rx="120" ry="180" transform="rotate(-20 650 200)"/>
+          <ellipse cx="650" cy="200" rx="80" ry="140" transform="rotate(-20 650 200)"/>
+          <line x1="650" y1="20" x2="650" y2="380" transform="rotate(-20 650 200)"/>
+          <ellipse cx="120" cy="620" rx="90" ry="140" transform="rotate(15 120 620)"/>
+          <ellipse cx="120" cy="620" rx="55" ry="100" transform="rotate(15 120 620)"/>
+          <line x1="120" y1="480" x2="120" y2="760" transform="rotate(15 120 620)"/>
+        </g>
+        <!-- Fine gold circle ornament -->
+        <circle cx="400" cy="400" r="280" stroke="#C9A96E" stroke-width="0.3" fill="none" opacity="0.2"/>
+        <circle cx="400" cy="400" r="250" stroke="#C9A96E" stroke-width="0.3" fill="none" opacity="0.15"/>
+      </svg>
+    </div>
+
+    <div class="hero__gold-line"></div>
+
+    <div class="container hero__content">
+      <div class="hero__eyebrow reveal">Премиум салон красоты</div>
+      <h1 class="hero__title reveal">
+        Красота начинается<br/>
+        <em>с заботы о себе</em>
+      </h1>
+      <p class="hero__sub reveal">
+        Пространство, где профессиональное мастерство встречается<br class="br-hide"/>
+        с индивидуальным подходом к каждому гостю
+      </p>
+      <div class="hero__cta reveal">
+        <a href="#booking" class="btn btn--primary">Записаться на визит</a>
+        <a href="#services" class="btn btn--ghost">Наши услуги</a>
+      </div>
+      <div class="hero__stats reveal">
+        <div class="hero__stat">
+          <span class="hero__stat-num">8+</span>
+          <span class="hero__stat-label">лет опыта</span>
+        </div>
+        <div class="hero__stat-div"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">2 400+</span>
+          <span class="hero__stat-label">довольных гостей</span>
+        </div>
+        <div class="hero__stat-div"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">15</span>
+          <span class="hero__stat-label">мастеров</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Прокрутить вниз">
+      <span class="hero__scroll-line"></span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 9l5 5 5-5" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/></svg>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about section" id="about">
+    <div class="container about__grid">
+      <div class="about__img-wrap reveal">
+        <div class="about__img-card about__img-card--main">
+          <svg viewBox="0 0 420 520" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ag1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F5D5CB"/>
+                <stop offset="100%" stop-color="#F2E8DC"/>
+              </linearGradient>
+            </defs>
+            <rect width="420" height="520" fill="url(#ag1)" rx="4"/>
+            <!-- Stylized woman silhouette / salon scene -->
+            <ellipse cx="210" cy="160" rx="55" ry="65" fill="#C9A96E" opacity="0.3"/>
+            <ellipse cx="210" cy="155" rx="38" ry="45" fill="#C9A96E" opacity="0.5"/>
+            <rect x="160" y="215" width="100" height="180" rx="20" fill="#C9A96E" opacity="0.25"/>
+            <!-- mirror frame -->
+            <rect x="60" y="60" width="300" height="380" rx="8" fill="none" stroke="#C9A96E" stroke-width="2" opacity="0.5"/>
+            <rect x="75" y="75" width="270" height="350" rx="4" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.4"/>
+            <!-- ornament top -->
+            <ellipse cx="210" cy="60" rx="22" ry="12" fill="none" stroke="#C9A96E" stroke-width="1.5" opacity="0.6"/>
+            <text x="210" y="465" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#2C2218" opacity="0.5" font-style="italic">Lumière Studio</text>
+          </svg>
+        </div>
+        <div class="about__img-card about__img-card--accent">
+          <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+            <rect width="200" height="220" fill="#F2E8DC" rx="4"/>
+            <circle cx="100" cy="90" r="50" fill="#C9A96E" opacity="0.2"/>
+            <circle cx="100" cy="90" r="35" fill="#C9A96E" opacity="0.3"/>
+            <!-- scissors icon -->
+            <g transform="translate(70,60)" stroke="#C9A96E" stroke-width="1.5" fill="none" opacity="0.8">
+              <circle cx="10" cy="10" r="8"/>
+              <circle cx="50" cy="10" r="8"/>
+              <line x1="16" y1="16" x2="44" y2="44"/>
+              <line x1="44" y1="16" x2="16" y2="44"/>
+            </g>
+            <text x="100" y="160" text-anchor="middle" font-family="Jost" font-size="11" fill="#2C2218" opacity="0.5">с 2016 года</text>
+          </svg>
+        </div>
+        <div class="about__badge">
+          <span class="about__badge-num">★ 4.9</span>
+          <span class="about__badge-text">средний рейтинг</span>
+        </div>
+      </div>
+
+      <div class="about__text">
+        <div class="section-eyebrow reveal">О нас</div>
+        <h2 class="section-title reveal">Место, где рождается<br/><em>ваша красота</em></h2>
+        <p class="about__desc reveal">
+          Lumière — это не просто салон красоты. Это пространство, созданное для тех, кто ценит качество, атмосферу и профессионализм. С 2016 года мы помогаем нашим гостям чувствовать себя на вершине мира.
+        </p>
+        <p class="about__desc reveal">
+          Наши мастера — сертифицированные специалисты с международным образованием. Мы используем только проверенные профессиональные бренды и следим за трендами мировой индустрии красоты.
+        </p>
+
+        <div class="about__features reveal">
+          <div class="about__feature">
+            <div class="about__feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6L12 2z" stroke="#C9A96E" stroke-width="1.3" fill="none"/></svg>
+            </div>
+            <div>
+              <div class="about__feature-title">Премиум материалы</div>
+              <div class="about__feature-text">Только сертифицированные профессиональные марки</div>
+            </div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#C9A96E" stroke-width="1.3"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div class="about__feature-title">Опытные мастера</div>
+              <div class="about__feature-text">15 специалистов с международными сертификатами</div>
+            </div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21s-8-4.5-8-10a8 8 0 0116 0c0 5.5-8 10-8 10z" stroke="#C9A96E" stroke-width="1.3"/></svg>
+            </div>
+            <div>
+              <div class="about__feature-title">Индивидуальный подход</div>
+              <div class="about__feature-text">Каждый гость — уникальная история красоты</div>
+            </div>
+          </div>
+          <div class="about__feature">
+            <div class="about__feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#C9A96E" stroke-width="1.3"/><circle cx="12" cy="9" r="2.5" stroke="#C9A96E" stroke-width="1.3"/></svg>
+            </div>
+            <div>
+              <div class="about__feature-title">Удобное расположение</div>
+              <div class="about__feature-text">В центре города, рядом с метро</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Наши услуги</div>
+        <h2 class="section-title">Всё для вашей<br/><em>красоты и комфорта</em></h2>
+      </div>
+
+      <div class="services__grid">
+
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="28" fill="#F5D5CB" opacity="0.4"/>
+              <!-- nail/hand icon -->
+              <path d="M22 42v-8a2 2 0 014 0v8" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M30 42v-12a2 2 0 014 0v12" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M38 42v-8a2 2 0 014 0v8" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M20 42h24" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M26 34v-4a2 2 0 00-2-2 2 2 0 00-2 2" stroke="#C9A96E" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__cat">Ногтевой сервис</div>
+            <h3 class="service-card__title">Маникюр</h3>
+            <p class="service-card__text">Классический, аппаратный и комбинированный маникюр с покрытием гель-лак. Дизайн любой сложности.</p>
+            <div class="service-card__price">от 1 800 ₽</div>
+          </div>
+          <a href="#booking" class="service-card__link">Записаться →</a>
+        </div>
+
+        <div class="service-card reveal" data-delay="100">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="28" fill="#F5D5CB" opacity="0.4"/>
+              <ellipse cx="32" cy="42" rx="14" ry="8" stroke="#C9A96E" stroke-width="1.5"/>
+              <path d="M25 38c0-4 14-4 14 0" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M29 36v-8M35 36v-8" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__cat">Ногтевой сервис</div>
+            <h3 class="service-card__title">Педикюр</h3>
+            <p class="service-card__text">Комплексный уход за стопами. Аппаратный педикюр, SPA-процедуры и оздоровительные обертывания.</p>
+            <div class="service-card__price">от 2 200 ₽</div>
+          </div>
+          <a href="#booking" class="service-card__link">Записаться →</a>
+        </div>
+
+        <div class="service-card reveal" data-delay="200">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="28" fill="#F5D5CB" opacity="0.4"/>
+              <!-- lips icon -->
+              <path d="M20 30c3-4 9-4 12-1 3-3 9-3 12 1C44 36 38 42 32 42c-6 0-12-6-12-12z" stroke="#C9A96E" stroke-width="1.5" fill="none"/>
+              <path d="M26 31c2-1 4-1 6 0 2-1 4-1 6 0" stroke="#C9A96E" stroke-width="1" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__cat">Образ</div>
+            <h3 class="service-card__title">Макияж</h3>
+            <p class="service-card__text">Дневной, вечерний, свадебный и авангардный макияж. Работаем с профессиональной косметикой MAC и Dior.</p>
+            <div class="service-card__price">от 3 500 ₽</div>
+          </div>
+          <a href="#booking" class="service-card__link">Записаться →</a>
+        </div>
+
+        <div class="service-card service-card--featured reveal" data-delay="0">
+          <div class="service-card__badge">Популярно</div>
+          <div class="service-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="28" fill="#C9A96E" opacity="0.2"/>
+              <!-- face icon -->
+              <circle cx="32" cy="28" r="14" stroke="#C9A96E" stroke-width="1.5"/>
+              <path d="M27 32c1.5 2 7.5 2 10 0" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round"/>
+              <circle cx="28" cy="26" r="1.5" fill="#C9A96E"/>
+              <circle cx="36" cy="26" r="1.5" fill="#C9A96E"/>
+            </svg>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__cat">Уход</div>
+            <h3 class="service-card__title">Уход за лицом</h3>
+            <p class="service-card__text">Профессиональные пилинги, маски и лифтинг-процедуры. Работаем с брендами Thalgo, Sothys и La Mer.</p>
+            <div class="service-card__price">от 4 800 ₽</div>
+          </div>
+          <a href="#booking" class="service-card__link">Записаться →</a>
+        </div>
+
+        <div class="service-card reveal" data-delay="100">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="28" fill="#F5D5CB" opacity="0.4"/>
+              <!-- hair icon -->
+              <path d="M20 20 Q32 10 44 20 Q50 32 44 44 Q32 50 20 44 Q14 32 20 20z" stroke="#C9A96E" stroke-width="1.5" fill="none"/>
+              <path d="M26 20 Q32 15 38 20 Q40 28 38 36" stroke="#C9A96E" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+              <path d="M20 30 Q28 28 36 32" stroke="#C9A96E" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+            </svg>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__cat">Волосы</div>
+            <h3 class="service-card__title">Окрашивание волос</h3>
+            <p class="service-card__text">Балаяж, омбре, мелирование и сложное окрашивание. Используем краски Wella, Loreal и Kerastase.</p>
+            <div class="service-card__price">от 5 200 ₽</div>
+          </div>
+          <a href="#booking" class="service-card__link">Записаться →</a>
+        </div>
+
+        <div class="service-card service-card--cta reveal" data-delay="200">
+          <div class="service-card__cta-inner">
+            <div class="service-card__cta-eyebrow">Не знаете с чего начать?</div>
+            <h3 class="service-card__cta-title">Бесплатная<br/>консультация</h3>
+            <p class="service-card__cta-text">Наш стилист поможет подобрать идеальный уход именно для вас</p>
+            <a href="#booking" class="btn btn--primary">Записаться</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Галерея</div>
+        <h2 class="section-title">Наши работы говорят<br/><em>сами за себя</em></h2>
+      </div>
+    </div>
+
+    <div class="gallery__grid">
+      <!-- Gallery items generated as SVG art pieces -->
+      <div class="gallery__item gallery__item--tall reveal">
+        <div class="gallery__inner">
+          <svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+              <linearGradient id="gg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F5D5CB"/>
+                <stop offset="100%" stop-color="#F2E8DC"/>
+              </linearGradient>
+            </defs>
+            <rect width="300" height="420" fill="url(#gg1)"/>
+            <ellipse cx="150" cy="160" rx="60" ry="75" fill="#C9A96E" opacity="0.25"/>
+            <ellipse cx="150" cy="155" rx="42" ry="55" fill="#C9A96E" opacity="0.35"/>
+            <path d="M100 230 Q150 210 200 230 L220 380 Q150 400 80 380z" fill="#C9A96E" opacity="0.2"/>
+            <text x="150" y="400" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#2C2218" opacity="0.6" font-style="italic">Свадебный образ</text>
+          </svg>
+          <div class="gallery__overlay">
+            <span>Свадебный образ</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery__item reveal" data-delay="50">
+        <div class="gallery__inner">
+          <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <rect width="300" height="260" fill="#F2E8DC"/>
+            <g transform="translate(60,40)">
+              <!-- nails art -->
+              <rect x="10" y="0" width="24" height="40" rx="12" fill="#F5D5CB" stroke="#C9A96E" stroke-width="1.2"/>
+              <rect x="44" y="10" width="24" height="40" rx="12" fill="#C9A96E" opacity="0.6"/>
+              <rect x="78" y="5" width="24" height="42" rx="12" fill="#F5D5CB" stroke="#C9A96E" stroke-width="1"/>
+              <rect x="112" y="12" width="22" height="38" rx="11" fill="#C9A96E" opacity="0.4"/>
+              <rect x="144" y="8" width="20" height="36" rx="10" fill="#F5D5CB" stroke="#C9A96E" stroke-width="1"/>
+              <!-- star on nail 2 -->
+              <path d="M56 20 l2 6 6 0-5 4 2 6-5-3-5 3 2-6-5-4 6 0z" fill="#fff" opacity="0.7"/>
+            </g>
+            <text x="150" y="230" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#2C2218" opacity="0.6" font-style="italic">Маникюр</text>
+          </svg>
+          <div class="gallery__overlay"><span>Маникюр</span></div>
+        </div>
+      </div>
+
+      <div class="gallery__item reveal" data-delay="100">
+        <div class="gallery__inner">
+          <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+              <radialGradient id="gg3" cx="50%" cy="40%" r="60%">
+                <stop offset="0%" stop-color="#F5D5CB"/>
+                <stop offset="100%" stop-color="#F2E8DC"/>
+              </radialGradient>
+            </defs>
+            <rect width="300" height="260" fill="url(#gg3)"/>
+            <!-- makeup brushes -->
+            <line x1="100" y1="200" x2="130" y2="60" stroke="#C9A96E" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="128" cy="55" rx="8" ry="18" fill="#C9A96E" opacity="0.5" transform="rotate(-15 128 55)"/>
+            <line x1="150" y1="210" x2="158" y2="55" stroke="#C9A96E" stroke-width="2.5" stroke-linecap="round"/>
+            <ellipse cx="157" cy="50" rx="6" ry="14" fill="#F5D5CB" stroke="#C9A96E" stroke-width="1"/>
+            <line x1="200" y1="205" x2="185" y2="65" stroke="#C9A96E" stroke-width="2" stroke-linecap="round"/>
+            <ellipse cx="186" cy="60" rx="5" ry="12" fill="#C9A96E" opacity="0.4" transform="rotate(10 186 60)"/>
+            <text x="150" y="240" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#2C2218" opacity="0.6" font-style="italic">Макияж</text>
+          </svg>
+          <div class="gallery__overlay"><span>Макияж</span></div>
+        </div>
+      </div>
+
+      <div class="gallery__item gallery__item--wide reveal" data-delay="150">
+        <div class="gallery__inner">
+          <svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+              <linearGradient id="gg4" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#C9A96E" stop-opacity="0.3"/>
+                <stop offset="50%" stop-color="#F5D5CB"/>
+                <stop offset="100%" stop-color="#C9A96E" stop-opacity="0.2"/>
+              </linearGradient>
+            </defs>
+            <rect width="600" height="260" fill="url(#gg4)"/>
+            <!-- hair color gradient waves -->
+            <path d="M0 80 Q150 40 300 80 Q450 120 600 80" stroke="#C9A96E" stroke-width="2" fill="none" opacity="0.4"/>
+            <path d="M0 110 Q150 70 300 110 Q450 150 600 110" stroke="#C9A96E" stroke-width="1.5" fill="none" opacity="0.35"/>
+            <path d="M0 140 Q150 100 300 140 Q450 180 600 140" stroke="#C9A96E" stroke-width="1" fill="none" opacity="0.3"/>
+            <path d="M0 170 Q150 130 300 170 Q450 210 600 170" stroke="#F5D5CB" stroke-width="2" fill="none" opacity="0.6"/>
+            <path d="M0 200 Q150 160 300 200 Q450 240 600 200" stroke="#C9A96E" stroke-width="1.5" fill="none" opacity="0.4"/>
+            <text x="300" y="240" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#2C2218" opacity="0.6" font-style="italic">Балаяж • Омбре • Сложное окрашивание</text>
+          </svg>
+          <div class="gallery__overlay"><span>Окрашивание</span></div>
+        </div>
+      </div>
+
+      <div class="gallery__item reveal" data-delay="200">
+        <div class="gallery__inner">
+          <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <rect width="300" height="260" fill="#FDFAF6"/>
+            <!-- face care -->
+            <circle cx="150" cy="110" r="70" fill="#F5D5CB" opacity="0.4"/>
+            <circle cx="150" cy="110" r="52" fill="#F5D5CB" opacity="0.3" stroke="#C9A96E" stroke-width="0.8"/>
+            <circle cx="135" cy="100" r="5" fill="#C9A96E" opacity="0.5"/>
+            <circle cx="165" cy="100" r="5" fill="#C9A96E" opacity="0.5"/>
+            <path d="M135 125 Q150 137 165 125" stroke="#C9A96E" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <!-- sparkles -->
+            <path d="M95 60 l2 8 8 2-8 2-2 8-2-8-8-2 8-2z" fill="#C9A96E" opacity="0.5"/>
+            <path d="M205 75 l1 5 5 1-5 1-1 5-1-5-5-1 5-1z" fill="#C9A96E" opacity="0.4"/>
+            <text x="150" y="220" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#2C2218" opacity="0.6" font-style="italic">Уход за лицом</text>
+          </svg>
+          <div class="gallery__overlay"><span>Уход за лицом</span></div>
+        </div>
+      </div>
+
+      <div class="gallery__item reveal" data-delay="250">
+        <div class="gallery__inner">
+          <svg viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <rect width="300" height="260" fill="#F2E8DC"/>
+            <!-- pedicure feet -->
+            <ellipse cx="120" cy="140" rx="35" ry="50" fill="#F5D5CB" opacity="0.6"/>
+            <ellipse cx="180" cy="145" rx="32" ry="48" fill="#F5D5CB" opacity="0.5"/>
+            <!-- toes -->
+            <circle cx="105" cy="95" r="8" fill="#C9A96E" opacity="0.5"/>
+            <circle cx="120" cy="90" r="8" fill="#C9A96E" opacity="0.6"/>
+            <circle cx="135" cy="93" r="7" fill="#C9A96E" opacity="0.45"/>
+            <circle cx="148" cy="100" r="7" fill="#C9A96E" opacity="0.4"/>
+            <circle cx="165" cy="96" r="8" fill="#C9A96E" opacity="0.55"/>
+            <circle cx="179" cy="90" r="8" fill="#C9A96E" opacity="0.6"/>
+            <text x="150" y="230" text-anchor="middle" font-family="Cormorant Garamond" font-size="13" fill="#2C2218" opacity="0.6" font-style="italic">Педикюр</text>
+          </svg>
+          <div class="gallery__overlay"><span>Педикюр</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Отзывы</div>
+        <h2 class="section-title">Что говорят<br/><em>наши гости</em></h2>
+      </div>
+
+      <div class="reviews__grid">
+
+        <div class="review-card reveal" data-delay="0">
+          <div class="review-card__stars">★★★★★</div>
+          <blockquote class="review-card__text">
+            Пришла к Lumière впервые на уход за лицом — и стала постоянным гостем. Здесь всё продумано до мелочей: атмосфера, сервис и, конечно, результат. Кожа как после отпуска!
+          </blockquote>
+          <div class="review-card__author">
+            <div class="review-card__avatar">АК</div>
+            <div>
+              <div class="review-card__name">Анна Козлова</div>
+              <div class="review-card__meta">Уход за лицом, постоянный гость</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card review-card--featured reveal" data-delay="100">
+          <div class="review-card__quote">"</div>
+          <div class="review-card__stars">★★★★★</div>
+          <blockquote class="review-card__text">
+            Делала свадебный макияж и маникюр. Мастера — настоящие профессионалы. Держалось весь день и вечер. Фотографии получились шикарными. Спасибо команде Lumière за идеальный день!
+          </blockquote>
+          <div class="review-card__author">
+            <div class="review-card__avatar">МС</div>
+            <div>
+              <div class="review-card__name">Мария Соколова</div>
+              <div class="review-card__meta">Свадебный пакет</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal" data-delay="200">
+          <div class="review-card__stars">★★★★★</div>
+          <blockquote class="review-card__text">
+            Окрашивание балаяжем — именно то, о чём мечтала. Мастер тщательно подобрала оттенки под цвет глаз и кожи. Волосы не испортились, эффект натуральный. Буду возвращаться!
+          </blockquote>
+          <div class="review-card__author">
+            <div class="review-card__avatar">ЕП</div>
+            <div>
+              <div class="review-card__name">Елена Петрова</div>
+              <div class="review-card__meta">Окрашивание балаяж</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal" data-delay="100">
+          <div class="review-card__stars">★★★★★</div>
+          <blockquote class="review-card__text">
+            Отличный педикюр! Наконец нашла место, где делают по-настоящему качественно. Мастер внимательна, работает аккуратно. Чистота и стерильность — на высшем уровне.
+          </blockquote>
+          <div class="review-card__author">
+            <div class="review-card__avatar">НВ</div>
+            <div>
+              <div class="review-card__name">Наталья Воронова</div>
+              <div class="review-card__meta">SPA-педикюр</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY US ============ -->
+  <section class="why section" id="why">
+    <div class="why__bg"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Почему выбирают нас</div>
+        <h2 class="section-title section-title--light">Lumière — это<br/><em>другой уровень</em></h2>
+      </div>
+
+      <div class="why__grid">
+        <div class="why__item reveal" data-delay="0">
+          <div class="why__num">01</div>
+          <h3 class="why__title">Опытные специалисты</h3>
+          <p class="why__text">Каждый мастер проходит обучение в лучших школах красоты и регулярно повышает квалификацию на международных семинарах.</p>
+        </div>
+        <div class="why__item reveal" data-delay="100">
+          <div class="why__num">02</div>
+          <h3 class="why__title">Качественные материалы</h3>
+          <p class="why__text">Мы работаем только с проверенными профессиональными брендами: Wella, La Mer, MAC, Thalgo. Никаких компромиссов с качеством.</p>
+        </div>
+        <div class="why__item reveal" data-delay="200">
+          <div class="why__num">03</div>
+          <h3 class="why__title">Индивидуальный подход</h3>
+          <p class="why__text">Перед каждой процедурой мастер проводит консультацию. Ваши предпочтения, тип кожи и волос учитываются в каждой детали.</p>
+        </div>
+        <div class="why__item reveal" data-delay="300">
+          <div class="why__num">04</div>
+          <h3 class="why__title">Удобное расположение</h3>
+          <p class="why__text">Мы находимся в самом центре города в 3 минутах от метро. Удобная парковка для тех, кто приезжает на автомобиле.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING ============ -->
+  <section class="booking section" id="booking">
+    <div class="container booking__grid">
+      <div class="booking__left reveal">
+        <div class="section-eyebrow">Запись</div>
+        <h2 class="section-title">Забронируйте<br/><em>ваш визит</em></h2>
+        <p class="booking__desc">Заполните форму и мы свяжемся с вами в течение 30 минут для подтверждения записи. Или позвоните напрямую.</p>
+        <a href="tel:+74951234567" class="booking__phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" stroke="#C9A96E" stroke-width="1.5"/></svg>
+          +7 (495) 123-45-67
+        </a>
+        <div class="booking__guarantee">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Без предоплаты · Отмена бесплатна
+        </div>
+      </div>
+
+      <div class="booking__form-wrap reveal">
+        <form class="booking__form" id="bookingForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="name">Ваше имя</label>
+            <input class="form-input" type="text" id="name" name="name" placeholder="Как вас зовут?" autocomplete="given-name" required />
+            <span class="form-error" id="nameError">Пожалуйста, введите имя</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phone">Телефон</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel" required />
+            <span class="form-error" id="phoneError">Пожалуйста, введите телефон</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="service">Услуга</label>
+            <div class="form-select-wrap">
+              <select class="form-input form-select" id="service" name="service" required>
+                <option value="" disabled selected>Выберите услугу</option>
+                <option value="manicure">Маникюр</option>
+                <option value="pedicure">Педикюр</option>
+                <option value="makeup">Макияж</option>
+                <option value="face">Уход за лицом</option>
+                <option value="color">Окрашивание волос</option>
+                <option value="consult">Бесплатная консультация</option>
+              </select>
+              <svg class="form-select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <span class="form-error" id="serviceError">Пожалуйста, выберите услугу</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="comment">Комментарий <span class="optional">(необязательно)</span></label>
+            <textarea class="form-input form-textarea" id="comment" name="comment" placeholder="Пожелания или вопросы..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            <span class="btn-text">Записаться на визит</span>
+            <span class="btn-loading" hidden>Отправляем...</span>
+          </button>
+          <p class="form-privacy">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a></p>
+        </form>
+        <div class="booking__success" id="bookingSuccess" hidden>
+          <div class="booking__success-icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="19" stroke="#C9A96E" stroke-width="1.5"/><path d="M12 20l6 6 10-12" stroke="#C9A96E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3 class="booking__success-title">Заявка отправлена!</h3>
+          <p class="booking__success-text">Мы свяжемся с вами в течение 30 минут для подтверждения записи.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTS ============ -->
+  <section class="contacts section" id="contacts">
+    <div class="container contacts__grid">
+      <div class="contacts__info reveal">
+        <div class="section-eyebrow">Контакты</div>
+        <h2 class="section-title">Мы всегда<br/><em>рядом</em></h2>
+
+        <div class="contacts__items">
+          <div class="contacts__item">
+            <div class="contacts__item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#C9A96E" stroke-width="1.3"/><circle cx="12" cy="9" r="2.5" stroke="#C9A96E" stroke-width="1.3"/></svg>
+            </div>
+            <div>
+              <div class="contacts__item-label">Адрес</div>
+              <div class="contacts__item-value">Москва, ул. Тверская, 15, этаж 2<br/>м. Охотный ряд, 3 мин. пешком</div>
+            </div>
+          </div>
+
+          <div class="contacts__item">
+            <div class="contacts__item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" stroke="#C9A96E" stroke-width="1.3"/></svg>
+            </div>
+            <div>
+              <div class="contacts__item-label">Телефон</div>
+              <div class="contacts__item-value"><a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
+            </div>
+          </div>
+
+          <div class="contacts__item">
+            <div class="contacts__item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#C9A96E" stroke-width="1.3"/><path d="M12 7v5l3 3" stroke="#C9A96E" stroke-width="1.3" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <div class="contacts__item-label">Время работы</div>
+              <div class="contacts__item-value">Пн–Пт: 10:00 – 21:00<br/>Сб–Вс: 09:00 – 20:00</div>
+            </div>
+          </div>
+
+          <div class="contacts__item">
+            <div class="contacts__item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="#C9A96E" stroke-width="1.3"/><path d="M2 8l10 6 10-6" stroke="#C9A96E" stroke-width="1.3"/></svg>
+            </div>
+            <div>
+              <div class="contacts__item-label">Email</div>
+              <div class="contacts__item-value"><a href="mailto:hello@lumiere-beauty.ru">hello@lumiere-beauty.ru</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts__social">
+          <span class="contacts__social-label">Мы в соцсетях:</span>
+          <a href="#" class="contacts__social-link" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="contacts__social-link" aria-label="VK">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 7h4l2 5 2-5h4l-4 5 4 5h-4l-2-4-2 4H3l4-5-4-5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="contacts__social-link" aria-label="Telegram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 4L2 10l7 3 2 7 3-4 5 4 3-16z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="contacts__map reveal">
+        <div class="map-placeholder">
+          <svg viewBox="0 0 560 360" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <rect width="560" height="360" fill="#F2E8DC"/>
+            <!-- Stylized map grid -->
+            <g stroke="#C9A96E" stroke-width="0.5" opacity="0.3">
+              <line x1="0" y1="60" x2="560" y2="60"/>
+              <line x1="0" y1="120" x2="560" y2="120"/>
+              <line x1="0" y1="180" x2="560" y2="180"/>
+              <line x1="0" y1="240" x2="560" y2="240"/>
+              <line x1="0" y1="300" x2="560" y2="300"/>
+              <line x1="80" y1="0" x2="80" y2="360"/>
+              <line x1="160" y1="0" x2="160" y2="360"/>
+              <line x1="240" y1="0" x2="240" y2="360"/>
+              <line x1="320" y1="0" x2="320" y2="360"/>
+              <line x1="400" y1="0" x2="400" y2="360"/>
+              <line x1="480" y1="0" x2="480" y2="360"/>
+            </g>
+            <!-- Streets -->
+            <g fill="#fff" stroke="#E0D4C0" stroke-width="1">
+              <rect x="100" y="40" width="360" height="30" rx="2"/>
+              <rect x="60" y="160" width="440" height="28" rx="2"/>
+              <rect x="60" y="290" width="200" height="24" rx="2"/>
+              <rect x="180" y="0" width="24" height="360" rx="2"/>
+              <rect x="350" y="60" width="24" height="300" rx="2"/>
+            </g>
+            <!-- Buildings blocks -->
+            <g fill="#E8DDD0" stroke="#C9A96E" stroke-width="0.5" opacity="0.6">
+              <rect x="100" y="80" width="70" height="70" rx="3"/>
+              <rect x="185" y="80" width="50" height="70" rx="3"/>
+              <rect x="100" y="200" width="65" height="80" rx="3"/>
+              <rect x="385" y="80" width="80" height="70" rx="3"/>
+              <rect x="385" y="200" width="80" height="80" rx="3"/>
+              <rect x="250" y="200" width="85" height="80" rx="3"/>
+            </g>
+            <!-- Pin -->
+            <g transform="translate(268, 120)">
+              <circle cx="0" cy="0" r="22" fill="#C9A96E" opacity="0.2"/>
+              <circle cx="0" cy="0" r="14" fill="#C9A96E" opacity="0.4"/>
+              <path d="M0 -30 Q18 -15 18 0 C18 12 8 22 0 35 C-8 22-18 12-18 0 C-18-15 0-30 0-30z" fill="#C9A96E"/>
+              <circle cx="0" cy="0" r="7" fill="#FDFAF6"/>
+            </g>
+            <!-- Label -->
+            <rect x="180" y="260" width="200" height="40" rx="4" fill="#fff" opacity="0.85"/>
+            <text x="280" y="276" text-anchor="middle" font-family="Cormorant Garamond" font-size="11" fill="#2C2218" opacity="0.7">Lumière Beauty Studio</text>
+            <text x="280" y="293" text-anchor="middle" font-family="Jost" font-size="10" fill="#C9A96E">ул. Тверская, 15</text>
+          </svg>
+          <div class="map-placeholder__btn">
+            <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn--map">Открыть на карте</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">
+        <span class="nav__logo-line"></span>
+        Lumière
+        <span class="nav__logo-line"></span>
+      </div>
+      <p class="footer__copy">© 2024 Lumière Beauty Studio. Все права защищены.</p>
+      <div class="footer__links">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Договор оферты</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
